@@ -3,12 +3,12 @@
         <a id="logo-container" href="#!" class="brand-logo">My Broker</a>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a name="loopBtn" href="#"><i class="large material-icons">loop</i></a></li>
-            <li><a name="addBtn" href="#"><i class="large material-icons">add</i></a></li>
+            <li><a name="loopBtn" href="#" (click)="OnLoop()"><i class="large material-icons">loop</i></a></li>
+            <li><a name="addBtn" routerLink="new-stock"><i class="large material-icons">add</i></a></li>
         </ul>
         <ul id="nav-mobile" class="sidenav blue darken-1">
-            <li><a name="loopBtn" href="#" class="white-text"><i class="large material-icons white-text">loop</i>Aktualisieren</a></li>
-            <li><a name="addBtn" href="#" class="white-text"><i class="large material-icons white-text">add</i>Hinzufügen</a></li>
+            <li><a name="loopBtn" href="#" class="white-text" routerLink=""><i class="large material-icons white-text">loop</i>Aktualisieren</a></li>
+            <li><a name="addBtn" class="white-text" routerLink="new-stock"><i class="large material-icons white-text">add</i>Hinzufügen</a></li>
         </ul>
     </div>
 </nav>
@@ -16,10 +16,7 @@
 <main>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            <app-new-stock></app-new-stock>
-            <div id="stocks" class="row">
-                <app-card-template></app-card-template>
-            </div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </main>

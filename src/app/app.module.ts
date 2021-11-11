@@ -21,4 +21,6 @@ import { CardTemplateComponent } from './card-template/card-template.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
